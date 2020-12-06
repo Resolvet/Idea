@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .main > .banner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: -1;
+        }
+        .main > .banner > img {
+            width: 100%;
+            height: 100%;
+            transition: all .8s linear;
+            position: absolute;
+            opacity: 0;
+        }
+        .main > .banner > img.active {
+            opacity: 1;
+        }
+        .main > .bg {
+            position: absolute;
+            right: 20px;
+            top: 50px;
+            width: 35px;
+            height: 35px;
+            /* animation-name: identifier;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;; */
+        }
+        @keyframes identifier {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .main > .bg > img {
+            width: 100%;
+            height: 100%;
+        }
+        .main > .content {
+            width: 50%;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%,-40%);
+        }
+        .main > .content > p {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 30px;
+            font-weight: 800;
+            font-family: emoji;
+        }
+    </style>
+</head>
+<body>
+    <!-- <audio autoplay controls  loop>
+        <source  src="./images/1.mp3">
+    </audio> -->
+    <div class="main" id="main">
+        <div class="bg" id="bg">
+            <img src="./images/bg.png" alt="">
+        </div>
+        <div class="content">
+            <p>尔若难却淩同上，尔欲何年可相依。</p>
+            <p>故却难同此相伴，唔欲唫礜緿时鈤。</p>
+            <p>昔时同却响思忆，众庶之思尔当定。</p>
+            <p>天若有情天亦老，与子成悦亦何时。</p>
+            <p>花开花落昔时意，相思相念何时依。</p>
+            <P>若待繁花开满天，只是满天雕零意。</P>
+            <P>何不繁花竞开时，与子同悦花季时。</P>
+            <P> 若故难同倾此意，尔愿繁花满天季。</P>
+            <P>若恨天意难为却，此恨绵绵却如己。</P>
+            <P>锦瑟无端五十弦，壹弦壹柱思华年。</P>
+        </div>
+        <div class="banner" id="banner">
+            <img src="./images/1.jpg" class="active" alt="">
+            <img src="./images/2.jpg" alt="">
+            <img src="./images/3.jpg" alt="">
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

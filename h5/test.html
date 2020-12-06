@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("http://at.alicdn.com/t/font_2250264_6ndo3nxiq15.css");
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: none;
+        }
+
+        .wrapp {
+            max-width: 680px;
+            height: 6879px;
+            position: relative;
+            background: url("./images/1.jpg");
+            margin: 0 auto;
+        }
+
+        .wrapp_icon {
+            z-index: 99;
+            position: fixed;
+            right: 23px;
+            top: 35px;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(0, 0, 0, .3);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .wrapp_icon>span:first-child {
+            color: #fff;
+            font-size: 25px;
+        }
+
+        #after {
+            margin: 4px 0;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            width: 1.5px;
+            height: 28px;
+            background-color: #e3e3e3;
+            transform: rotate(-45deg) translateX(-50%);
+        }
+
+        #after.active {
+            display: none;
+        }
+
+
+        .fireworks {
+            position: absolute;
+            width: 84px;
+            height: 80px;
+        }
+
+        .fire1 {
+            left: 74px;
+            top: 89px;
+        }
+
+        .fire1 {
+            animation-name: Tscale;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .fireworks>img {
+            width: 50px;
+        }
+
+        .fire2 {
+            top: 20px;
+            right: 30px;
+        }
+        .fire2>img {
+            opacity: 0;
+            animation-name: Tscale1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 2.5s;
+        }
+
+        .fire3 {
+            top: 200px;
+            right: 60px;
+        }
+        .fire4 {
+            top: 200px;
+            right: 200px;
+        }
+
+        .fire3 > img,.fire4 > img {
+            opacity: 0;
+            animation-name: Tscale3;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-delay: 4.5s;
+        }
+
+        @keyframes Tscale {
+            0% {
+                transform: scale(.8);
+            }
+
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        @keyframes Tscale1 {
+            0% {
+                opacity: 1;
+                transform: scale(.5);
+            }
+
+            100% {
+                transform: scale(.9);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes Tscale3 {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        .wrapp_box1 {
+            width: 90%;
+            height: 150px;
+            margin: 0 auto;
+            padding-top: 30px;
+            position: relative;
+        }
+
+        .wrapp_box1>img:first-child {
+            width: 100%;
+        }
+
+        .wrapp_box1>img:last-child {
+            width: 65px;
+            position: absolute;
+            left: 15px;
+            bottom: 20px;
+        }
+
+        .wrapp_content {
+            padding-top: 50px;
+            width: 90%;
+            height: 400px;
+            position: relative;
+            margin: 150px auto;
+            background-image: url("./images/6.jpg");
+            background-size: 100% 100%;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .wrapp_content>.wrapp_title {
+            width: 70%;
+            height: 50px;
+            position: absolute;
+            left: 50%;
+            top: 0px;
+            text-align: center;
+            font-size: 15px;
+            color: rgb(209, 38, 45);
+            font-weight: 600;
+            transform: translate(-50%, -50%);
+            background-image: url("./images/5.jpg");
+            background-size: 100% 100%;
+        }
+
+        .wrapp_content>.content {
+            text-indent: 2em;
+            color: rgb(255, 219, 134);
+        }
+
+        .wrapp_list {
+            width: 90%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .wrapp_list>.list_box {
+            width: 100%;
+            position: relative;
+            margin-bottom: 100px;
+            height: 500px;
+        }
+
+        .wrapp_list>.list_box>.list_title {
+            width: 70%;
+            height: 50px;
+            position: absolute;
+            left: 50%;
+            top: 0px;
+            text-align: center;
+            font-size: 18px;
+            color: rgb(209, 38, 45);
+            font-weight: 600;
+            line-height: 40px;
+            transform: translate(-50%, -50%);
+            background-image: url("./images/5.jpg");
+            background-size: 100% 100%;
+        }
+
+        .wrapp_list>.list_box>.list_content {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            height: 100px;
+        }
+
+        .wrapp_list>.list_box>.list_content>.list_mulis {
+            text-align: center;
+            line-height: 0px;
+            color: rgb(255, 219, 134);
+            font-size: 19px;
+            font-weight: 600;
+            position: relative;
+            width: 100%;
+            height: 30px;
+            background-image: url("./images/7.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .wrapp_list>.list_box>.list_content>.mulis_content {
+            color: rgb(255, 219, 134);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .wrapp_list>.list_box>.list_content>.mulis_content>p {
+            margin-bottom: 20px;
+        }
+
+        .wrapp_list>.list_box>.list_content>.mulis_content>p>img {
+            width: 100%;
+            height: 250px;
+        }
+        .wrapp_list>.list_box>.list_content>.mulis_content > p  video {
+            width: 100%;
+            height: 250px;
+        }
+    </style>
+</head>
+<!-- https://rrx.cn/storeview/lpukzs.html -->
+
+<body>
+    <audio src="./images/1.mp3" id="audio" loop></audio>
+    <div class="wrapp">
+        <div class="wrapp_box1">
+            <img src="./images/3.png" alt="">
+            <img src="./images/4.png" alt="">
+        </div>
+        <div class="wrapp_content">
+            <div class="wrapp_title">
+                追梦少年心向党<br />不忘初心绘党情
+            </div>
+            <div class="content">
+                理想指引人生方向，信念决定事业成败。习总书记多次谈到，
+                我们的理想信念就是共产主义远大理想和中国特色社会主义共同理想。
+                我们要以“一学一做”教育实践为契机，深入学习马克思列宁主义、毛泽东思想、邓小平理论、
+                “三个代表”重要思想、科学发展观、习总书记系列重要讲话精神、党的十八大以来党中央治国理政新理念新思想新战略，
+                把理想信念建立在对科学理论的理性认同上，建立在对历史规律的正确认识上，建立在对基本国情的准确把握上，
+                不断增强道路自信、理论自信、制度自信、文化自信，把个人的理想追求融入国家和民族的事业中，勇做走在时代前列的奋进者、
+                开拓者、奉献者。
+            </div>
+        </div>
+
+        <div class="wrapp_list">
+            <!-- 第一组开始 -->
+            <div class="list_box">
+                <div class="list_title">
+                    追梦少年心向党
+                </div>
+                <div class="list_content">
+                    <div class="list_mulis">
+                        心中有梦
+                    </div>
+                    <div class="mulis_content">
+                        <p>
+                            心中有梦，如果不去追梦，也不可以成为现实。我们要你追我赶，风起云涌春潮，敞开怀抱，
+                            去拥抱我们的梦想。透过车窗、旅馆的窗、宿舍的窗，我看见了沙漠和大海，仿佛也看到了我的梦想；
+                            霓虹闪烁的街景仿佛是梦想在向我招手，然后告诉我要坚持追梦；南腔北调，带着异域故事的人群，
+                            仿佛梦想就在我们的身边……我们要心中有梦，然后追梦，最后去打破梦际去实现它。
+                        </p>
+                        <p>
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607245567173&di=c1c98447b318d167cbf342364d5092dd&imgtype=0&src=http%3A%2F%2Fxinhuaapp-img.oss-cn-hangzhou.aliyuncs.com%2FParty%2F3%2F110108%2Fcontent%2F03d08%2F0b6f2%2F03d080b6f2f1d70bb15eff8b7ecbc335.jpg"
+                                alt="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 第一组结束 -->
+
+            <!-- 第一组开始 -->
+            <div class="list_box">
+                <div class="list_title">
+                    追梦少年心向党
+                </div>
+                <div class="list_content">
+                    <div class="list_mulis">
+                        不忘初心绘党情
+                    </div>
+                    <div class="mulis_content">
+                        <p>
+                            中国共产党早期组织代表李达、李汉俊、张国焘、刘仁静毛泽东、何叔衡、董必武、陈潭秋、王尽美、邓恩铭、陈公博、周佛海，
+                            还有包惠僧及共产国际代表马林等秘密在上海法租界的贝勒路树德里3号(今兴业路76号)，举行了中国共产党第一次全国代表大会。
+                        </p>
+                        <p>
+                           <video controls>
+                               <source src="./images/1.mp4" />
+                           </video>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 第一组结束 -->
+
+              <!-- 第一组开始 -->
+              <div class="list_box">
+                <div class="list_title">
+                    不忘初心绘党情
+                </div>
+                <div class="list_content">
+                    <div class="list_mulis">
+                        心中有梦
+                    </div>
+                    <div class="mulis_content">
+                        <p>
+                            心中有梦，如果不去追梦，也不可以成为现实。我们要你追我赶，风起云涌春潮，敞开怀抱，
+                            去拥抱我们的梦想。透过车窗、旅馆的窗、宿舍的窗，我看见了沙漠和大海，仿佛也看到了我的梦想；
+                            霓虹闪烁的街景仿佛是梦想在向我招手，然后告诉我要坚持追梦；南腔北调，带着异域故事的人群，
+                            仿佛梦想就在我们的身边……我们要心中有梦，然后追梦，最后去打破梦际去实现它。
+                        </p>
+                        <p>
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607245567173&di=c1c98447b318d167cbf342364d5092dd&imgtype=0&src=http%3A%2F%2Fxinhuaapp-img.oss-cn-hangzhou.aliyuncs.com%2FParty%2F3%2F110108%2Fcontent%2F03d08%2F0b6f2%2F03d080b6f2f1d70bb15eff8b7ecbc335.jpg"
+                                alt="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 第一组结束 -->
+
+             <!-- 第一组开始 -->
+             <div class="list_box">
+                <div class="list_title">
+                    不忘初心绘党情
+                </div>
+                <div class="list_content">
+                    <div class="list_mulis">
+                        不忘初心绘党情
+                    </div>
+                    <div class="mulis_content">
+                        <p>
+                            中国共产党早期组织代表李达、李汉俊、张国焘、刘仁静毛泽东、何叔衡、董必武、陈潭秋、王尽美、邓恩铭、陈公博、周佛海，
+                            还有包惠僧及共产国际代表马林等秘密在上海法租界的贝勒路树德里3号(今兴业路76号)，举行了中国共产党第一次全国代表大会。
+                        </p>
+                        <p>
+                           <video controls>
+                               <source src="./images/1.mp4" />
+                           </video>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 第一组结束 -->
+
+            <div class="wrapp_icon" id="wrapp_icon">
+                <span class="iconfont icon-yinle"></span>
+                <span id="after"></span>
+            </div>
+            <!-- 烟花 -->
+            <div class="fireworks fire1">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="fireworks fire2">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="fireworks fire3">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="fireworks fire4">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <!-- 烟花 -->
+        </div>
+        <script>
+            window.onload = function () {
+                let wrapp_icon = document.getElementById("wrapp_icon"),
+                    audio = document.getElementById("audio"),
+                    after = document.getElementById("after"),
+                    flag = false,
+                    timer = null,
+                    rotate = 0;
+
+                wrapp_icon.addEventListener("click", function () {
+                    flag = !flag;
+                    flag ? hanelePlay() : handleStop();
+                })
+
+                // 开启音乐播放
+                function hanelePlay() {
+                    clearInterval(timer);
+                    after.classList.add("active");
+                    audio.play();
+                    timer = setInterval(_ => {
+                        rotate += 5;
+                        wrapp_icon.style.transform = `rotate(${rotate}deg)`;
+                    }, 25)
+                }
+                // 关闭播放
+                function handleStop () {
+                    clearInterval(timer);
+                    after.classList.remove("active");
+                    audio.pause();
+                }
+            }
+        </script>
+</body>
+
+</html>
