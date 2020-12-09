@@ -1,20 +1,31 @@
 window.onload = function () {
-    let banner = document.getElementById("banner").children,
-        bg = document.getElementById("bg"),
-        Index = 0,
-        deg = 0;
-      setInterval(_=>{
-        SetClass()
-      },5000)
-      setInterval(() => {
-          deg+=2;
-          if (deg>=360) deg = 0;
-          bg.style.transform = `rotate(${deg}deg)`;
-      }, 12);
-    function SetClass () {
-        banner[Index].classList.remove("active");
-        Index >= banner.length-1 ? Index = 0 : Index++;
-        console.log(Index)
-        banner[Index].classList.add("active");
-    }
+  let wrapp_icon = document.getElementById("wrapp_icon"),
+      audio = document.getElementById("audio"),
+      after = document.getElementById("after"),
+      flag = false,
+      timer = null,
+      rotate = 0;
+
+  wrapp_icon.addEventListener("click", function () {
+      flag = !flag;
+      flag ? hanelePlay() : handleStop();
+  })
+
+  // 开启音乐播放
+  function hanelePlay() {
+      clearInterval(timer);
+      after.classList.add("active");
+      audio.play();
+      timer = setInterval(_ => {
+          rotate += 5;
+          if (rotate >=360) rotate  = 0;
+          wrapp_icon.style.transform = `rotate(${rotate}deg)`;
+      }, 25)
+  }
+  // 关闭播放
+  function handleStop () {
+      clearInterval(timer);
+      after.classList.remove("active");
+      audio.pause();
+  }
 }
