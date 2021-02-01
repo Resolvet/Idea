@@ -4,12 +4,12 @@ $(window).scroll(function() {
     $(".banner_select").css({backgroundPosition: `0% ${scrollTop}px`});
     if (scrollTop>650) {
         let x;
-        x = (640-scrollTop)/2;
+        x = (640-scrollTop)/5;
         $(".section_box3").css({backgroundPosition: `0% ${x}px`})
     }
     if (scrollTop>1450) {
         let x;
-        x = (1550-scrollTop)/2.5;
+        x = (1550-scrollTop)/5;
         $(".section_bg").css({backgroundPosition: `0% ${x}px`})
     }
   })
