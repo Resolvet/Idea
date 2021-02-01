@@ -503,10 +503,11 @@ footer {
         box-sizing: border-box;
     }
     #container_right {
-        width: 71%;
+        width: 70%;
     }
     #container_left {
-        width: 55px;
+        background: none;
+        width: 75px;
     }
     #list_box {
         padding-left: 10px;
