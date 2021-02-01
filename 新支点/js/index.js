@@ -1,6 +1,6 @@
 $(window).scroll(function() {
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    scrollTop > 52 ? $(".header_nav").addClass("navbar-fixed-top"):$(".header_nav").removeClass("navbar-fixed-top");
+    scrollTop > 0 ? $(".header").addClass("navbar-fixed-top"):$(".header_nav").removeClass("navbar-fixed-top");
     $(".banner_select").css({backgroundPosition: `0% ${scrollTop}px`});
     if (scrollTop>650) {
         let x;
@@ -9,7 +9,7 @@ $(window).scroll(function() {
     }
     if (scrollTop>1450) {
         let x;
-        x = (1550-scrollTop)/5;
+        x = (1580-scrollTop)/2;
         $(".section_bg").css({backgroundPosition: `0% ${x}px`})
     }
   })
