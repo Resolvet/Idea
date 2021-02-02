@@ -11,10 +11,17 @@
     z-index: 9999;
     border-bottom: 3px solid #ecab20;
 }
+.navbar {
+    border: none;
+    border-radius: 0;
+}
 .header_nav {
     width: 1180px;
+    background-color: #fff;
     margin: 0 auto;
+    border-bottom: 3px solid #ecab20;
 }
+
 .collapse_left {
     margin-right: 80px;
 }
@@ -93,7 +100,7 @@ main {
     box-sizing: border-box;
     height: 110px;
     margin-bottom: 80px;
-    margin-top: 55px;
+    margin-top: 40px;
 }
 .information > .list_options > ul {
     height: 110px;
@@ -346,8 +353,9 @@ main {
     background-size: cover;
     margin-bottom: 40px;
 }
+/* 这里宽边800 */
 .section_wrappBox {
-    width: 1180px;
+    width: 800px;
     margin: 0 auto; 
 }
 .wrrapBox_title {
@@ -369,21 +377,24 @@ main {
  .wrrapBox_list > ul > li {
      width: 100%;
      color: #333;
-     font-size: 14px;
+     font-size: 13px;
      margin-bottom: 15px;
  }
  .wrrapBox_list > ul > li:first-child > span:first-child {
-    width: 25px;
+    width: 35px;
     background-color: #ecab20;
     color: #fff;
     font-size: 12px;
     border-radius: 5px;
     text-align: center;
+    margin-right: 15px;
  }
  .wrrapBox_list > ul > li > span:first-child{
      display: inline-block;
-     width: 40px;
+     width: 45px;
+     /* margin-right: px; */
  }
+ 
  .wrrapBox_list2 > .font_size {
      font-size: 24px;
  }
@@ -392,7 +403,7 @@ main {
 }
  .wrrapBox_list2 > ul > li {
     color: #333;
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 15px;
  }
 .wrrapBox_list2 > .list_bao > li:first-child > span:first-child {
@@ -609,5 +620,24 @@ footer {
     }
     .information > .list_options > ul  li {
         width: 20%;
+    }
+    .list_box {
+        margin-top: 30px;
+    }
+
+    .wrapp_bottom {
+        width: 59%;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+    .wrapp_bottom > img {
+        width: 100px;
+    }
+    .wrapp_bottom > span {
+        margin-top: 30px;
+        font-size: 12px;
     }
 }
