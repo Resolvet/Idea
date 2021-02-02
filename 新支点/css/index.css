@@ -201,10 +201,10 @@ main {
 #container_left > img {
     width: 100%;
 }
-#list_box {
+/* #list_box {
     padding-left: 70px;
     box-sizing: border-box;
-}
+} */
 .list_data {
     width: 100%;
     margin-top: 25px;
@@ -550,10 +550,10 @@ footer {
         background: none;
         width: 75px;
     }
-    #list_box {
+    /* #list_box {
         padding-left: 10px;
         box-sizing: border-box;
-    }
+    } */
   /* section_box3 */
     .wrapp_container > b {
         color: #ecab20;
@@ -611,6 +611,9 @@ footer {
 }
 /*  */
 @media screen and  (max-width: 768px) {
+    .header_nav {
+        width: 100%;
+    }
     .information > .list_options > ul  li > img {
         width: 70%;
     }
@@ -624,7 +627,6 @@ footer {
     .list_box {
         margin-top: 30px;
     }
-
     .wrapp_bottom {
         width: 59%;
         position: absolute;
