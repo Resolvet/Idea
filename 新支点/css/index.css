@@ -24,6 +24,12 @@
 
 .collapse_left {
     margin-right: 80px;
+    display: flex;
+    align-items: center;
+}
+.collapse_left > img {
+    width: 125px;
+    height: 30px;
 }
 .navbar-nav > li {
     margin-left: 40px;
@@ -263,18 +269,19 @@ main {
 }
 .wrapp_bottom {
     position: absolute;
-    bottom: -28px;
+    bottom: -49px;
     left: 50%;
     transform: translateX(-50%);
 }
 .wrapp_bottom > img {
-    width: 140px;
+    width: 260px;
     float: left;
 }
 .wrapp_bottom > span {
     float: right;
-    margin-top: 30px;
-    font-size: 15px;
+    margin-top: 55px;
+    font-size: 1.5625rem;
+    font-weight: 600;
 }
 
 /* .section_box4 */
