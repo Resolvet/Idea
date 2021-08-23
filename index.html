@@ -2,179 +2,183 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			user-select: none;
-		}
-
-		.wrapp {
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-
-		.wrapp>p {
-			padding: 10px 0;
-			text-align: center;
-		}
-
-		.wrapp_content {
-			width: 288px;
-			min-height: 200px;
-			border: 1px solid rgb(42, 179, 243);
-		}
-
-		.wrapp_content>p {
-			width: 100%;
-			text-align: center;
-		}
-
-		.wrapp_content>ul {
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		.wrapp_content>ul>li {
-			transition: all .1s;
-			margin: 5px;
-			padding: 2px 5px;
-			border: 1px solid red;
-		}
-
-		.wrapp_btn {
-			margin: 10px auto;
-			width: 60px;
-			height: 30px;
-			border-radius: 5px;
-			background-color: rgb(12, 245, 245);
-			text-align: center;
-			line-height: 30px;
-			cursor: pointer;
-			color: #fff;
-			font-size: 14px;
-		}
-		.wrapp_set {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-		}
-		.wrapp_set > input {
-			outline: none;
-			width: 70%;
-			height: 30px;
-			border: none;
-			border-radius: 5px;
-			border: 1px solid #ddd;
-		}
-		.wrapp_set > button {
-			outline: none;
-			width: 25%;
-			height: 30px;
-			border: none;
-			cursor: pointer;
-			background: #fff;
-			font-size: 14px;
-			border: 1px solid #ddd;
-			border-radius: 5px;
-			color: #666;
-			transition: all .3s;
-		}
-		.wrapp_set > button:hover {
-			background-color: #409eff;
-			color: #fff;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            user-select: none;
+        }
+        
+        .wrapp {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .wrapp>p {
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        .wrapp_content {
+            width: 288px;
+            min-height: 200px;
+            border: 1px solid rgb(42, 179, 243);
+        }
+        
+        .wrapp_content>p {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .wrapp_content>ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .wrapp_content>ul>li {
+            transition: all .1s;
+            margin: 5px;
+            padding: 2px 5px;
+            border: 1px solid red;
+        }
+        
+        .wrapp_btn {
+            margin: 10px auto;
+            width: 60px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgb(12, 245, 245);
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+        }
+        
+        .wrapp_set {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .wrapp_set>input {
+            outline: none;
+            width: 70%;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .wrapp_set>button {
+            outline: none;
+            width: 25%;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+            background: #fff;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #666;
+            transition: all .3s;
+        }
+        
+        .wrapp_set>button:hover {
+            background-color: #409eff;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="wrapp">
-		<p id="wrapp_name"></p>
-		<div class="wrapp_content">
-			<p>本期幸运：</p>
-			<ul id="ul_list"></ul>
-		</div>
-		<div class="wrapp_btn" id="wrapp_btn">开始</div>
-		<div class="wrapp_set">
-			<input type="number" id="input">
-			<button id="btn_set">设置</button>
-		</div>
-		<p>
-			<font color="red" size="1">*温馨提示：默认幸运人数是一人dududu...</font>
-		</p>
-	</div>
-	<script>
-		const student = ['陈海俊','陈子祥','戴望生','封宇帆','付海伦','韩章文','何康','贺俊','洪志辉','黄华根','黄林长','江振华','赖鑫海','李骥',
-			'李忠奇','刘金金','刘玄','刘勋','刘子轩','卢方昕','卢杭','毛书晨','施龑','陶冶','陶周奇','万伦','王金胜','王育亮','温豪','吴地杰','吴繁秀','吴闽君',
-			'吴婷','吴章棋','谢晖文','谢王艳','熊广龙','熊文豪','徐雨婷','杨欢','杨飘','易鑫','于承权','袁炬','袁凯华','张岱宗','张金慧','张俊','张丽君',
-			'张振华','周振兴','邹焌聪'
-		];
-		let wrapp_name = document.getElementById("wrapp_name"),
-			ul_list = document.getElementById("ul_list"),
-			wrapp_btn = document.getElementById("wrapp_btn"),
-			btn_set = document.getElementById("btn_set"),
-			input = document.getElementById("input"),
-			numberCount = 1,
-			timer = null,
-			flag = false,
-			index = 0;
+    <div class="wrapp">
+        <p id="wrapp_name"></p>
+        <div class="wrapp_content">
+            <p>本期幸运：</p>
+            <ul id="ul_list"></ul>
+        </div>
+        <div class="wrapp_btn" id="wrapp_btn">开始</div>
+        <div class="wrapp_set">
+            <input type="number" id="input">
+            <button id="btn_set">设置</button>
+        </div>
+        <p>
+            <font color="red" size="1">*温馨提示：默认幸运人数是一人dududu...</font>
+        </p>
+    </div>
+    <script>
+        const student = ['陈海俊', '陈子祥', '戴望生', '封宇帆', '付海伦', '韩章文', '何康', '贺俊', '洪志辉', '黄华根', '黄林长', '江振华', '赖鑫海', '李骥',
+            '李忠奇', '刘金金', '刘玄', '刘勋', '刘子轩', '卢方昕', '卢杭', '毛书晨', '施龑', '陶冶', '陶周奇', '万伦', '王金胜', '王育亮', '温豪', '吴地杰', '吴繁秀', '吴闽君',
+            '吴婷', '吴章棋', '谢晖文', '谢王艳', '熊广龙', '熊文豪', '徐雨婷', '杨欢', '杨飘', '易鑫', '于承权', '袁炬', '袁凯华', '张岱宗', '张金慧', '张俊', '张丽君',
+            '张振华', '周振兴', '邹焌聪'
+        ];
+        let wrapp_name = document.getElementById("wrapp_name"),
+            ul_list = document.getElementById("ul_list"),
+            wrapp_btn = document.getElementById("wrapp_btn"),
+            btn_set = document.getElementById("btn_set"),
+            input = document.getElementById("input"),
+            numberCount = 1,
+            timer = null,
+            flag = false,
+            index = 0;
 
-		btn_set.addEventListener("click",function () {
-			
-			if (input.value>=1 && input.value<=student.length-25) {
-				numberCount = input.value;
-				alert("设置成功！");
-			} else {
-				alert("温馨提示：输入的数字大于或者小于总人数!");
-			}
-		},false)
+        btn_set.addEventListener("click", function() {
 
-		function handleRandom(arr, numberCount, state, arr_index) {
-			let setArr = new Set();
-			if (numberCount != 1) {
-				arr.splice(arr_index, 1);
-				while (true) {
-					let random = parseInt(Math.random() * arr.length - 1);
-					setArr.add(arr[random]);
-					if (setArr.size == numberCount) break;
-				}
-			}
-			setArr.add(state);
-			for (let i = 0; i < setArr.size; i++) {
-				let newLi = document.createElement("li");
-				newLi.innerText = Array.from(setArr)[i];
-				ul_list.appendChild(newLi);
-			}
-			console.log(setArr)
-		}
+            if (input.value >= 1 && input.value <= student.length - 25) {
+                numberCount = input.value;
+                alert("设置成功！");
+            } else {
+                alert("温馨提示：输入的数字大于或者小于总人数!");
+            }
+        }, false)
+
+        function handleRandom(arr, numberCount, state, arr_index) {
+            let setArr = new Set();
+            if (numberCount != 1) {
+                arr.splice(arr_index, 1);
+                while (true) {
+                    let random = parseInt(Math.random() * arr.length - 1);
+                    setArr.add(arr[random]);
+                    if (setArr.size + 1 == numberCount) break;
+                }
+            }
+            setArr.add(state);
+            for (let i = 0; i < setArr.size; i++) {
+                let newLi = document.createElement("li");
+                newLi.innerText = Array.from(setArr)[i];
+                ul_list.appendChild(newLi);
+            }
+            console.log(setArr)
+        }
 
 
-		wrapp_btn.addEventListener("click", function () {
-			flag = !flag;
-			this.innerText = flag ? "暂停" : "开始";
-			if (flag) {
-				ul_list.innerHTML = '';
-				wrapp_name.innerHTML = '';
-				timer = setInterval(_ => {
-					index++;
-					if (index >= student.length) {
-						index = 0;
-					}
-					wrapp_name.innerText = student[index];
-				}, 50)
-			} else {
-				clearInterval(timer);
-				handleRandom(student, numberCount, student[index], index);
-			}
-		}, false)
-	</script>
-	<!-- 创作系统，二进制，八进制，十进制，认识计算机，第一代谁发明的 -->
+        wrapp_btn.addEventListener("click", function() {
+            flag = !flag;
+            this.innerText = flag ? "暂停" : "开始";
+            if (flag) {
+                ul_list.innerHTML = '';
+                wrapp_name.innerHTML = '';
+                timer = setInterval(_ => {
+                    index++;
+                    if (index >= student.length) {
+                        index = 0;
+                    }
+                    wrapp_name.innerText = student[index];
+                }, 50)
+            } else {
+                clearInterval(timer);
+                handleRandom(student, numberCount, student[index], index);
+            }
+        }, false)
+    </script>
+    <!-- 创作系统，二进制，八进制，十进制，认识计算机，第一代谁发明的 -->
 </body>
 
 </html>
